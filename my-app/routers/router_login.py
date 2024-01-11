@@ -49,7 +49,7 @@ def cpanelRecoveryPassUser():
 # Crear cuenta de usuario
 @app.route('/saved-register', methods=['POST'])
 def cpanelRegisterUserBD():
-    if request.method == 'POST' and 'cedula' in request.form and 'estado_civil' in request.form:
+    if request.method == 'POST' and 'cedula' in request.form and 'pass_user' in request.form:
         cedula = request.form['cedula']
         name = request.form['name']
         surname = request.form['surname']
