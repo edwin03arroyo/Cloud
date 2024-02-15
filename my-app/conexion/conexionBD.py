@@ -9,11 +9,11 @@ def connectionBD():
     try:
         # connection = mysql.connector.connect(
         connection = mysql.connector.connect(
-            host="monorail.proxy.rlwy.net",
+            host="roundhouse.proxy.rlwy.net",
                 #host="viaduct.proxy.rlwy.net",
-            port=35012,
+            port=13897,
             user="root",
-            passwd="fdGhbhHCbcEE21gBGBD2HHaBBG3-6eCf",
+            passwd="GFGbFH-d2253BAeHGffG5FFHFhc1-Bdg",
                 #passwd="-D2eD6aDb5Bg6dEbhAAeBB6gd3EheaBg",
             database="railway",
                 #database="crud_python",

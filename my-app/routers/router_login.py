@@ -24,11 +24,20 @@ def inicio():
 
 @app.route('/mi-perfil/<string:id>', methods=['GET'])
 def perfil(id):
-    if 'conectado' in session:
+  if 'conectado' in session:
         
-        return render_template(f'public/perfil/perfil.html', info_perfil_session=info_perfil_session(id), dataLogin=dataLoginSesion(), areas=lista_areasBD(), roles=lista_rolesBD())
-    else:
-        return redirect(url_for('inicio'))
+    info = info_perfil_session(id) 
+    data = dataLoginSesion()
+    areas = lista_areasBD()
+    roles = lista_rolesBD()
+    
+    return render_template('public/perfil/perfil.html',
+                      info_perfil_session=info, 
+                      dataLogin=data,
+                      areas=areas,
+                      roles=roles)
+  else:
+    return redirect(url_for('inicio'))
 
 
 # Crear cuenta de usuario
